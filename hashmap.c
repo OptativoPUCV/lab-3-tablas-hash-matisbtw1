@@ -95,6 +95,7 @@ Pair * searchMap(HashMap * map,  char * key) {
             map->current = pos;
             return map->buckets[pos];
         }
+        if (map->buckets[pos] == NULL) return NULL;
         pos = (pos + 1) % map->capacity;
     }
 
